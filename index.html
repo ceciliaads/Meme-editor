@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme editor</title>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b82efd4820.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <header class="header">
+            <h1>Meme Generator</h1>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-image"></i>
+                    Image
+                </li>
+                <li>
+                    <i class="fa-solid fa-font"></i>
+                    Text
+                </li>
+                <li>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    Dark mode
+                </li>
+            </ul>
+        </header>
+        <main class="main-container" id="main-container">
+            <div class="meme-container" id="meme-container">
+                <p class="text-container top-text" id="top-text">TOP TEXT</p>
+                <div class="meme-img" id="meme-img"></div>
+                <p class="text-container bottom-text" id="bottom-text">
+                    BOTTOM TEXT
+                </p>
+            </div>
+        </main>
+        <button class="download-button">
+            <i class="fa-solid fa-download"></i>
+            Download meme
+        </button>
+    </section>
+    <aside>
+        <section class="image-container">
+            <h3>
+                IMAGE
+            </h3>
+            <form>
+                <label for="url-img">
+                    URL
+                </label>
+                <input id="url-img" type="url" />
+
+                <label for="background-color">
+                    BACKGROUND
+                </label>
+                <input id="background-color" type="color" /> <span></span>
+                <select id="background-mix">
+                    <option value="unset">None</option>
+                    <option value="lighten">Lighten</option>
+                    <option value="darken">Darken</option>
+                    <option value="difference">Difference</option>
+                    <option value="luminosity">Luminosity</option>
+                    <option value="multiply">Multiply</option>
+
+                </select>
+                <h4>Filters</h4>
+                <label for="brightness">
+                    Brightness
+                </label>
+                <input id="brightness" type="range" />
+                <label for="opacity">
+                    Opacity
+                </label>
+                <input id="opacity" type="range" />
+                <label for="contrast">
+                    Contrast
+                </label>
+                <input id="contrast" type="range" />
+                <label for="blur">
+                    Blur
+                </label>
+                <input id="blur" type="range" />
+                <label for="grayscale">
+                    Grayscale
+                </label>
+                <input id="grayscale" type="range" />
+                <label for="sepia">
+                    Sepia
+                </label>
+                <input id="sepia" type="range" />
+                <label for="hue-rotation">
+                    Hue-rotation
+                </label>
+                <input id="hue-rotation" type="range" />
+                <label for="saturation">
+                    Saturation
+                </label>
+                <input id="saturation" type="range" />
+                <label for="invert">
+                    Invert
+                </label>
+                <input id="invert" type="range" />
+
+                <button>
+                    Reset filters
+                </button>
+            </form>
+
+        </section>
+        <section class="text-container">
+            <h3>
+                TEXT
+            </h3>
+        </section>
+
+    </aside>
+    <script src="script.js"></script>
+</body>
+
+</html>
