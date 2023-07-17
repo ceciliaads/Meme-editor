@@ -15,20 +15,22 @@
     <section>
         <header class="header">
             <h1>Meme Generator</h1>
-            <ul>
-                <li>
-                    <i class="fa-regular fa-image"></i>
-                    Image
-                </li>
-                <li>
-                    <i class="fa-solid fa-font"></i>
-                    Text
-                </li>
-                <li>
-                    <i class="fa-regular fa-lightbulb"></i>
-                    Dark mode
-                </li>
-            </ul>
+            <nav class="nav-container">
+                <ul>
+                    <li id="nav-img">
+                        <i class="fa-regular fa-image"></i>
+                        Image
+                    </li>
+                    <li id="nav-text">
+                        <i class="fa-solid fa-font"></i>
+                        Text
+                    </li>
+                    <li id="nav-mode">
+                        <i class="fa-solid fa-lightbulb"></i></i>
+                        Dark mode
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main class="main-container" id="main-container">
             <div class="meme-container" id="meme-container">
@@ -45,7 +47,7 @@
         </button>
     </section>
     <aside>
-        <section class="image-container">
+        <section id="img-aside" i class="img-container">
             <h3>
                 IMAGE
             </h3>
@@ -112,7 +114,7 @@
             </form>
 
         </section>
-        <section class="text-container">
+        <section id="text-aside" class="text-container">
             <h3>
                 TEXT
             </h3>

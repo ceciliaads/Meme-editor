@@ -1,0 +1,26 @@
+.hidden {
+    display: none;
+}
+
+.nav-container ul{
+    list-style: none;
+    display: flex;
+}
+aside {
+    height: 100vh;
+    background-color: gray;
+}
+
+.dark-aside {
+    background-color: black;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container-dark {
+    background-color: darkslategrey;
+}
