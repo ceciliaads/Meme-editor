@@ -12,9 +12,11 @@
 </head>
 
 <body>
-    <section>
-        <header class="header">
-            <h1>Meme Generator</h1>
+    <section class="front-page">
+        <header id="header" class="header">
+            <h1 class="main-title">
+                Meme Generator
+            </h1>
             <nav class="nav-container">
                 <ul>
                     <li id="nav-img">
@@ -26,8 +28,8 @@
                         Text
                     </li>
                     <li id="nav-mode">
-                        <i class="fa-solid fa-lightbulb"></i></i>
-                        Dark mode
+                        <i class="fa-regular fa-lightbulb"></i></i>
+                        Light mode
                     </li>
                 </ul>
             </nav>
@@ -40,14 +42,19 @@
                     BOTTOM TEXT
                 </p>
             </div>
+
         </main>
-        <button class="download-button">
-            <i class="fa-solid fa-download"></i>
-            Download meme
-        </button>
+        <div class="btn-container">
+            <button class="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download meme
+            </button>
+        </div>
+
+
     </section>
-    <aside>
-        <section id="img-aside" i class="img-container">
+    <aside class="aside">
+        <section id="img-aside" class="img-aside">
             <h3>
                 IMAGE
             </h3>
@@ -114,7 +121,7 @@
             </form>
 
         </section>
-        <section id="text-aside" class="text-container">
+        <section id="text-aside" class="text-aside">
             <h3>
                 TEXT
             </h3>

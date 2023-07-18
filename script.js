@@ -6,6 +6,7 @@ const modeNav = document.getElementById("nav-mode");
 const imgAside = document.getElementById("img-aside");
 const textAside = document.getElementById("text-aside");
 const mainContainer = document.getElementById("main-container")
+const header = document.getElementById("header");
 
 imgNav.addEventListener("click", () => hideImgAside());
 textNav.addEventListener("click", () => hideTextAside());
@@ -22,14 +23,15 @@ const hideTextAside = () => {
 }
 
 const changeMode = () => {
-    textAside.classList.toggle("dark-aside");
-    imgAside.classList.toggle("dark-aside");
-    mainContainer.classList.toggle("main-container-dark");
+    textAside.classList.toggle("light-aside");
+    imgAside.classList.toggle("light-aside");
+    mainContainer.classList.toggle("main-container-light");
+    header.classList.toggle("header-light");
 
-    if (mainContainer.classList.contains("main-container-dark")) {
-        modeNav.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Light mode';
-        } else {
+    if (mainContainer.classList.contains("main-container-light")) {
         modeNav.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Dark mode';
+        } else {
+        modeNav.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Light mode';
     }
 }
 

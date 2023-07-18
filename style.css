@@ -1,46 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    color: #FFFFFF;
+}
+
+.front-page {
+    width: 80%;
+}
+
+.aside {
+    height: 100vh;
+    width: 20%;
+    background-color: #252935; 
+}
+
 .hidden {
     display: none;
 }
-header {
+
+.header {
     background-color: #191E2B;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.nav-container ul{
+.main-title {
+    font-size: 40px;
+}
+
+/* .nav-container */ ul {
     list-style: none;
     display: flex;
-}
-aside {
-    height: 100vh;
-    background-color: gray;
+    justify-content: space-between;
+    
+    font-size: 15px;
 }
 
-.dark-aside {
-    background-color: black;
-    color: white;
+li {
+    margin: 0 10px;
+}
+
+.header-light {
+    background-color: #E0E0E0;
+    color: #424242;
+}
+
+.light-aside { 
+    background-color: #FAFAFA;
+    color: #4C4C4C;
+    height: 100vh;
 }
 
 .main-container {
     display: flex;
     justify-content: center;
+    background-color: #30343F;
 }
 
-.main-container-dark {
-    background-color: darkslategrey;
+.main-container-light {
+    background-color: #EEEEEE;
 }
 
 .meme-container {
-    height: 80vh;
+    height: 75vh;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.text-container {
+    height: 20%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
 .meme-img {
+    height: 80%;
     width: 100%;
     flex-grow: 1;
-    background-color: aquamarine;
+    background-color: black;
     background-size: cover;
     background-repeat: "no-repeat";
     background-position: "center";
+}
+
+.btn-container{
+    background-color: #30343F;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-btn {
+    background-color: #285E20;
+    color: white;
+    padding: 15px;
+    border: 0px;
+    margin: 5px;
 }
