@@ -9,6 +9,12 @@
     <!-- LINKS -->
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b82efd4820.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -52,7 +58,7 @@
             </div>
 
         </main>
-        <div class="btn-container">
+        <div id="dl-btn-container" class="dl-btn-container">
             <button id="download-btn" class="download-btn" type="button" aria-label="Download button">
                 <i class="fa-solid fa-download"></i>
                 Download meme
@@ -68,7 +74,7 @@
             <h3>
                 IMAGE
             </h3>
-            <form>
+            <form id="form-image">
                 <label for="url-img">
                     URL
                 </label>
@@ -92,56 +98,58 @@
                 </select>
                 <h4>Filters</h4>
 
-                <label for="brightness">
+                <label for="brightness-input">
                     Brightness
                 </label>
-                <input id="brightness" class="" type="range" min="0" max="1" step="0.1" value="1"
+                <input id="brightness-input" class="" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Brightness range" />
 
-                <label for="opacity">
+                <label for="opacity-input">
                     Opacity
                 </label>
-                <input id="opacity" class="" type="range" min="0" max="1" step="0.1" value="1"
+                <input id="opacity-input" class="" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Opacity range" />
 
-                <label for="contrast">
+                <label for="contrast-input">
                     Contrast
                 </label>
-                <input id="contrast" class="" type="range" min="100" max="1000" step="1" value="100"
+                <input id="contrast-input" class="" type="range" min="100" max="1000" step="1" value="100"
                     aria-label="Contrast range" />
 
-                <label for="blur">
+                <label for="blur-input">
                     Blur
                 </label>
-                <input id="blur" class="" type="range" min="0" max="10" step="0.1" value="0" aria-label="Blur range" />
+                <input id="blur-input" class="" type="range" min="0" max="10" step="0.1" value="0"
+                    aria-label="Blur range" />
 
-                <label for="grayscale">
+                <label for="grayscale-input">
                     Grayscale
                 </label>
-                <input id="grayscale" class="" type="range" min="0" max="100" step="1" value="0"
+                <input id="grayscale-input" class="" type="range" min="0" max="100" step="1" value="0"
                     aria-label="Grayscale range" />
 
-                <label for="sepia">
+                <label for="sepia-input">
                     Sepia
                 </label>
-                <input id="sepia" class="" type="range" min="0" max="100" step="1" value="0" aria-label="Sepia range" />
+                <input id="sepia-input" class="" type="range" min="0" max="100" step="1" value="0"
+                    aria-label="Sepia range" />
 
-                <label for="hue-rotation">
+                <label for="hue-rotation-input">
                     Hue-rotation
                 </label>
-                <input id="hue-rotation" class="" type="range" min="0" max="359" step="1" value="0"
+                <input id="hue-rotation-input" class="" type="range" min="0" max="359" step="1" value="0"
                     aria-label="Hue-rotation range" />
 
-                <label for="saturation">
+                <label for="saturation-input">
                     Saturation
                 </label>
-                <input id="saturation" class="" type="range" min="100" max="1000" step="10" value="100"
+                <input id="saturation-input" class="" type="range" min="100" max="1000" step="10" value="100"
                     aria-label="Saturation range" />
 
-                <label for="invert">
+                <label for="invert-input">
                     Invert
                 </label>
-                <input id="invert" class="" type="range" min="0" max="1" step="0.1" value="1"
+                <input id="invert-input" class="" type="range" min="0" max="1" step="0.1" value="0"
                     aria-label="Invert range" />
 
                 <button id="reset-btn" class="reset-btn" type="button" aria-label="Reset filters">

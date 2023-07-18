@@ -97,7 +97,7 @@ li {
     background-position: "center";
 }
 
-.btn-container{
+.dl-btn-container{
     background-color: #30343F;
     height: 7vh;
     display: flex;
@@ -111,4 +111,7 @@ li {
     padding: 15px;
     border: 0px;
     margin: 5px;
+}
+.dl-btn-container-light {
+    background-color: #EEEEEE;
 }
