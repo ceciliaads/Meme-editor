@@ -45,3 +45,25 @@ urlImg.addEventListener("input", () => changeBackground());
 const changeBackground = () => {
     memeImg.style.backgroundImage = `url('${urlImg.value}')`;
 };
+
+// MEME BACKGROUND COLOR/FILTERS
+
+const colorPicker = document.getElementById("color-picker");
+const colorName = document.getElementById("color-name");
+
+const changeMemeBackground = () => {
+    let chosenColor = colorPicker.value;
+    colorName.innerHTML = `${chosenColor}`;
+    memeImg.style.backgroundColor = chosenColor;
+};
+
+colorPicker.addEventListener("input", () => changeMemeBackground());
+
+const backgroundFilter = document.getElementById("background-filter");
+
+backgroundFilter.addEventListener('change', () => changeBackgroundColor());
+
+const changeBackgroundColor = () => {
+    console.log(backgroundFilter.value)
+    memeImg.style.backgroundBlendMode = backgroundFilter.value;
+}
