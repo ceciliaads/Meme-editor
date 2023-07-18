@@ -28,8 +28,18 @@ const changeMode = () => {
 
     if (mainContainer.classList.contains("main-container-dark")) {
         modeNav.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Light mode';
-        //modeButton.innerHTML = '<i class="fa-solid fa-align-left"></i> Modo claro';
         } else {
         modeNav.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Dark mode';
     }
 }
+
+// MEME URL
+
+const urlImg = document.getElementById("url-img");
+const memeImg = document.getElementById("meme-img");
+
+urlImg.addEventListener("input", () => changeBackground());
+
+const changeBackground = () => {
+    memeImg.style.backgroundImage = `url('${urlImg.value}')`;
+};
