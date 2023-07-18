@@ -13,6 +13,9 @@
 
 <body>
     <section class="front-page">
+        <!-- ---------------------------------------------------------
+            --------------------------- HEADER --------------------------- -->
+
         <header id="header" class="header">
             <h1 class="main-title">
                 Meme Generator
@@ -34,18 +37,23 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-container" id="main-container">
-            <div class="meme-container" id="meme-container">
-                <p class="text-container top-text" id="top-text">TOP TEXT</p>
-                <div class="meme-img" id="meme-img"></div>
-                <p class="text-container bottom-text" id="bottom-text">
+        <!-- ---------------------------------------------------------
+            --------------------------- MEME --------------------------- -->
+
+        <main id="main-container" class="main-container">
+            <div id="meme-container" class="meme-container">
+                <p id="top-text" class="text-container top-text">
+                    TOP TEXT
+                </p>
+                <div id="meme-img" class="meme-img"></div>
+                <p id="bottom-text" class="text-container bottom-text">
                     BOTTOM TEXT
                 </p>
             </div>
 
         </main>
         <div class="btn-container">
-            <button class="download-btn">
+            <button id="download-btn" class="download-btn" type="button" aria-label="Download button">
                 <i class="fa-solid fa-download"></i>
                 Download meme
             </button>
@@ -54,6 +62,8 @@
 
     </section>
     <aside class="aside">
+        <!-- ---------------------------------------------------------
+            --------------------------- IMAGE --------------------------- -->
         <section id="img-aside" class="img-aside">
             <h3>
                 IMAGE
@@ -64,11 +74,14 @@
                 </label>
                 <input id="url-img" type="url" />
 
-                <label for="bcolor-picker">
+                <label for="color-picker">
                     BACKGROUND
                 </label>
-                <input type="color" class="input-color" id="color-picker" /><span id="color-name"></span>
-                <select title="Choose a color filter" class="input-style" id="background-filter">
+                <input id="color-picker" class="input-color" type="color" value="#FFFFFF" />
+                <span id="color-name" class="text-color-hex">
+                    #FFFFFF
+                </span>
+                <select id="background-filter" class="input-style" title="Choose a color filter">
                     <option value="unset">None</option>
                     <option value="lighten">Lighten</option>
                     <option value="darken">Darken</option>
@@ -78,53 +91,202 @@
 
                 </select>
                 <h4>Filters</h4>
+
                 <label for="brightness">
                     Brightness
                 </label>
-                <input id="brightness" type="range" />
+                <input id="brightness" class="" type="range" min="0" max="1" step="0.1" value="1"
+                    aria-label="Brightness range" />
+
                 <label for="opacity">
                     Opacity
                 </label>
-                <input id="opacity" type="range" />
+                <input id="opacity" class="" type="range" min="0" max="1" step="0.1" value="1"
+                    aria-label="Opacity range" />
+
                 <label for="contrast">
                     Contrast
                 </label>
-                <input id="contrast" type="range" />
+                <input id="contrast" class="" type="range" min="100" max="1000" step="1" value="100"
+                    aria-label="Contrast range" />
+
                 <label for="blur">
                     Blur
                 </label>
-                <input id="blur" type="range" />
+                <input id="blur" class="" type="range" min="0" max="10" step="0.1" value="0" aria-label="Blur range" />
+
                 <label for="grayscale">
                     Grayscale
                 </label>
-                <input id="grayscale" type="range" />
+                <input id="grayscale" class="" type="range" min="0" max="100" step="1" value="0"
+                    aria-label="Grayscale range" />
+
                 <label for="sepia">
                     Sepia
                 </label>
-                <input id="sepia" type="range" />
+                <input id="sepia" class="" type="range" min="0" max="100" step="1" value="0" aria-label="Sepia range" />
+
                 <label for="hue-rotation">
                     Hue-rotation
                 </label>
-                <input id="hue-rotation" type="range" />
+                <input id="hue-rotation" class="" type="range" min="0" max="359" step="1" value="0"
+                    aria-label="Hue-rotation range" />
+
                 <label for="saturation">
                     Saturation
                 </label>
-                <input id="saturation" type="range" />
+                <input id="saturation" class="" type="range" min="100" max="1000" step="10" value="100"
+                    aria-label="Saturation range" />
+
                 <label for="invert">
                     Invert
                 </label>
-                <input id="invert" type="range" />
+                <input id="invert" class="" type="range" min="0" max="1" step="0.1" value="1"
+                    aria-label="Invert range" />
 
-                <button>
+                <button id="reset-btn" class="reset-btn" type="button" aria-label="Reset filters">
                     Reset filters
                 </button>
             </form>
 
         </section>
-        <section id="text-aside" class="text-aside">
-            <h3>
-                TEXT
-            </h3>
+
+        <!-- ---------------------------------------------------------
+            --------------------------- TEXT --------------------------- -->
+        <section id="text-aside" class="text-aside hidden">
+            <h3>TEXTO</h3>
+            <div class="upper-text-container">
+                <label for="top-text">
+                    UPPER
+                </label>
+                <textarea id="top-text" class="" type="text" placeholder="TOP TEXT"
+                    aria-label="Introduce upper text for meme"></textarea>
+                <div>
+                    <input id="check-top-text" type="checkbox" aria-label="Remove upper text" />
+                    <label for="check-top-text" class="">
+                        Remove upper text
+                    </label>
+                </div>
+            </div>
+
+            <div class="lower-text-container">
+                <label for="bottom-text">
+                    LOWER
+                </label>
+                <textarea id="bottom-text" class="" type="text" placeholder="BOTTOM TEXT"
+                    aria-label="Introduce lower text for meme"></textarea>
+                <div>
+                    <input id="check-bottom-text" type="checkbox" aria-label="Remove lower text" />
+                    <label for="check-bottom-text" class="">
+                        Remove lower text
+                    </label>
+                </div>
+            </div>
+
+            <div class="font-container">
+                <label for="option-text-font" aria-label="Choose a text font">
+                    FONT
+                </label>
+                <select id="option-text-font" class="">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewriter">American Typewriter</option>
+                    <option value="Courier New Black">Andale Mono</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+
+                <div class="option-text-align">
+                    <input id="font-size" class="" type="number" value="50" min="12" max="90"
+                        aria-label="Choose a font zise" />
+                    <div class="font-btn">
+                        <button id="btn-left" class="" type="button" aria-label="Text align left">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <button id="btn-center" class="" type="button" aria-label=" Text alignt center">
+                            <i class="fas fa-align-center"></i>
+                        </button>
+                        <button id="btn-right" class="" type="button" aria-label="Text align right">
+                            <i class="fas fa-align-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-font-container">
+                <div>
+                    <div class="color-container">
+                        <label for="text-color">
+                            COLOR
+                        </label>
+                        <div class="cont-input-color">
+                            <input id="text-color" class="" type="color" value="#000000" aria-label="Text color" />
+                            <span class="text-color-hex">
+                                #000000
+                            </span>
+                        </div>
+                    </div>
+                    <div class="background-color-container">
+                        <label for="text-background">
+                            BACKGROUND
+                        </label>
+                        <div class="text-background-color-input">
+                            <input id="text-background" class="" type="color" value="#FFFFFF"
+                                aria-label="Text background color" />
+                            <span class="text-color-hex">
+                                #FFFFFF
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input id="checkbox-transparent type=" checkbox"" />
+                    <label for="checkbox-transparent">
+                        Transparent background
+                    </label>
+                </div>
+            </div>
+
+            <div class="border-container mb-20px">
+                <h4>
+                    OUTLINE
+                </h4>
+                <div class="border-options">
+                    <button id="text-outline-none" type="button" aria-label="No text outline">
+                        None
+                    </button>
+                    <button id="text-outline-light" type="button" aria-label="Light text outline">
+                        Light
+                    </button>
+                    <button id="text-outline-dark" type="button" aria-label="Dark text outline">
+                        Dark
+                    </button>
+                </div>
+            </div>
+
+            <div class="space-text-container">
+                <label for="padding-text">
+                    Spacing
+                </label>
+                <input id="padding-text" class="" type="number" min="20" max="50" />
+            </div>
+
+            <div class="leading-text-container">
+                <label for="line-height">
+                    Leading
+                </label>
+                <select id="line-height" class="">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div>
         </section>
 
     </aside>
