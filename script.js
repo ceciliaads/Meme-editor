@@ -36,8 +36,9 @@ const changeMode = () => {
         modeNav.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Light mode';
     }
 }
+// IMAGE ASIDE
 
-// MEME URL
+    // MEME URL
 
 const urlImg = document.getElementById("url-img");
 const memeImg = document.getElementById("meme-img");
@@ -120,3 +121,91 @@ const downloadMeme = () => {
     window.saveAs(blob, "my-meme.png");
 });
 };
+
+// TEXT ASIDE
+
+const topText = document.getElementById("top-text");
+const bottomText = document.getElementById("bottom-text");
+const topTextInput = document.getElementById("top-text-input");
+const bottomTextInput = document.getElementById("bottom-text-input");
+const checkTopText = document.getElementById("check-top-text");
+const checkBottomText = document.getElementById("check-bottom-text");
+
+topTextInput.addEventListener("input", () => changeTopText ());
+bottomTextInput.addEventListener("input", () => changeBottomText ());
+checkTopText.addEventListener("change",() => removeTopText());
+checkBottomText.addEventListener("change",() => removeBottomText());
+
+const changeTopText = () => {
+    topText.innerText = topTextInput.value;
+}
+
+const changeBottomText = () => {
+    bottomText.innerText = bottomTextInput.value;
+    
+}
+
+const removeTopText = () => {
+    if (checkTopText.checked) {
+    topText.classList.add("hidden");
+    } else {
+    topText.classList.remove("hidden");
+    }
+};
+
+const removeBottomText = () => {
+    if (checkBottomText.checked) {
+    bottomText.classList.add("hidden");
+    } else {
+    bottomText.classList.remove("hidden");
+    }
+};
+
+    //SELECT FONTS
+
+const fontSelector = document.getElementById("font-selector");
+console.log(fontSelector.value);
+    
+const changeFontFamily = () => {
+    topText.style.fontFamily = `${fontSelector.value}`;
+    bottomText.style.fontFamily = `${fontSelector.value}`;
+};
+    
+fontSelector.addEventListener("change", () => changeFontFamily());
+
+const fontSize =  document.getElementById ("font-size");
+fontSize.addEventListener("change", () => changeFontSize());
+
+
+const changeFontSize = () => {
+    topText.style.fontSize = `${fontSize.value}px`;
+    bottomText.style.fontSize = `${fontSize.value}px`;
+}        
+    
+
+    // ALIGN TEXT
+const alignLeftBtn = document.getElementById("btn-left");
+const alignCenterBtn = document.getElementById("btn-center");
+const alignRightBtn = document.getElementById("btn-right");
+
+
+alignLeftBtn.addEventListener("click", () => alignTextLeft());
+alignCenterBtn.addEventListener("click", () => alignTextCenter());
+alignRightBtn.addEventListener("click", () => alignTextRight());
+
+
+const alignTextLeft = () => {
+    topText.style.justifyContent = "flex-start";
+    bottomText.style.justifyContent = "flex-start";
+}
+
+const alignTextCenter = () => {
+    topText.style.justifyContent = "center";
+    bottomText.style.justifyContent = "center";
+}
+
+const alignTextRight = () => {
+    topText.style.justifyContent = "flex-end";
+    bottomText.style.justifyContent = "flex-end";
+}
+

@@ -74,82 +74,90 @@
             <h3>
                 IMAGE
             </h3>
-            <form id="form-image">
+            <form id="form-image" class="form-img">
                 <label for="url-img">
                     URL
                 </label>
-                <input id="url-img" type="url" />
+                <input id="url-img" class="url-img" type="url" />
+
 
                 <label for="color-picker">
                     BACKGROUND
                 </label>
-                <input id="color-picker" class="input-color" type="color" value="#FFFFFF" />
-                <span id="color-name" class="text-color-hex">
-                    #FFFFFF
-                </span>
-                <select id="background-filter" class="input-style" title="Choose a color filter">
-                    <option value="unset">None</option>
-                    <option value="lighten">Lighten</option>
-                    <option value="darken">Darken</option>
-                    <option value="difference">Difference</option>
-                    <option value="luminosity">Luminosity</option>
-                    <option value="multiply">Multiply</option>
 
-                </select>
-                <h4>Filters</h4>
+                <div class="flex-row background-color-filters">
+                    <div class="input-color-container input-style flex-row">
+                        <input id="color-picker" class="input-color input-style" type="color" value="#FFFFFF" />
+                        <span id="color-name" class="text-color-hex">
+                            #FFFFFF
+                        </span>
+                    </div>
+
+                    <select id="background-filter" class="input-style" title="Choose a color filter">
+                        <option value="unset">None</option>
+                        <option value="lighten">Lighten</option>
+                        <option value="darken">Darken</option>
+                        <option value="difference">Difference</option>
+                        <option value="luminosity">Luminosity</option>
+                        <option value="multiply">Multiply</option>
+                    </select>
+                </div>
+
+
+                <h4>FILTERS</h4>
 
                 <label for="brightness-input">
                     Brightness
                 </label>
-                <input id="brightness-input" class="" type="range" min="0" max="1" step="0.1" value="1"
+                <input id="brightness-input" class="input-range" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Brightness range" />
 
                 <label for="opacity-input">
                     Opacity
                 </label>
-                <input id="opacity-input" class="" type="range" min="0" max="1" step="0.1" value="1"
+                <input id="opacity-input" class="input-range" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Opacity range" />
 
                 <label for="contrast-input">
                     Contrast
                 </label>
-                <input id="contrast-input" class="" type="range" min="100" max="1000" step="1" value="100"
+                <input id="contrast-input" class="input-range" type="range" min="100" max="1000" step="1" value="100"
                     aria-label="Contrast range" />
 
                 <label for="blur-input">
                     Blur
                 </label>
-                <input id="blur-input" class="" type="range" min="0" max="10" step="0.1" value="0"
+                <input id="blur-input" class="input-range" type="range" min="0" max="10" step="0.1" value="0"
                     aria-label="Blur range" />
 
                 <label for="grayscale-input">
                     Grayscale
                 </label>
-                <input id="grayscale-input" class="" type="range" min="0" max="100" step="1" value="0"
+                <input id="grayscale-input" class="input-range" type="range" min="0" max="100" step="1" value="0"
                     aria-label="Grayscale range" />
 
                 <label for="sepia-input">
                     Sepia
                 </label>
-                <input id="sepia-input" class="" type="range" min="0" max="100" step="1" value="0"
+                <input id="sepia-input" class="input-range" type="range" min="0" max="100" step="1" value="0"
                     aria-label="Sepia range" />
 
                 <label for="hue-rotation-input">
                     Hue-rotation
                 </label>
-                <input id="hue-rotation-input" class="" type="range" min="0" max="359" step="1" value="0"
+                <input id="hue-rotation-input" class="input-range" type="range" min="0" max="359" step="1" value="0"
                     aria-label="Hue-rotation range" />
 
                 <label for="saturation-input">
                     Saturation
                 </label>
-                <input id="saturation-input" class="" type="range" min="100" max="1000" step="10" value="100"
+                <input id="saturation-input" class="input-range" type="range" min="100" max="1000" step="10" value="100"
                     aria-label="Saturation range" />
 
                 <label for="invert-input">
                     Invert
                 </label>
-                <input id="invert-input" class="" type="range" min="0" max="1" step="0.1" value="0"
+                <input id="invert-input" class="input-range" type="range" min="0" max="1" step="0.1" value="0"
                     aria-label="Invert range" />
 
                 <button id="reset-btn" class="reset-btn" type="button" aria-label="Reset filters">
@@ -163,11 +171,12 @@
             --------------------------- TEXT --------------------------- -->
         <section id="text-aside" class="text-aside hidden">
             <h3>TEXTO</h3>
+
             <div class="upper-text-container">
-                <label for="top-text">
+                <label for="top-text-input">
                     UPPER
                 </label>
-                <textarea id="top-text" class="" type="text" placeholder="TOP TEXT"
+                <textarea id="top-text-input" class="" type="text" placeholder="TOP TEXT"
                     aria-label="Introduce upper text for meme"></textarea>
                 <div>
                     <input id="check-top-text" type="checkbox" aria-label="Remove upper text" />
@@ -178,10 +187,10 @@
             </div>
 
             <div class="lower-text-container">
-                <label for="bottom-text">
+                <label for="bottom-text-input">
                     LOWER
                 </label>
-                <textarea id="bottom-text" class="" type="text" placeholder="BOTTOM TEXT"
+                <textarea id="bottom-text-input" class="" type="text" placeholder="BOTTOM TEXT"
                     aria-label="Introduce lower text for meme"></textarea>
                 <div>
                     <input id="check-bottom-text" type="checkbox" aria-label="Remove lower text" />
@@ -192,24 +201,24 @@
             </div>
 
             <div class="font-container">
-                <label for="option-text-font" aria-label="Choose a text font">
+                <label for="font-selector" aria-label="Choose a text font">
                     FONT
                 </label>
-                <select id="option-text-font" class="">
+                <select id="font-selector" class="">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewriter">American Typewriter</option>
                     <option value="Courier New Black">Andale Mono</option>
                     <option value="Comic Sans MS">Comic Sans MS</option>
                     <option value="Helvetica">Helvetica</option>
-                    <option value="Impact">Impact</option>
+                    <option value="Impact" selected>Impact</option>
                     <option value="Verdana">Verdana</option>
                     <option value="Times New Roman">Times New Roman</option>
                 </select>
 
                 <div class="option-text-align">
                     <input id="font-size" class="" type="number" value="50" min="12" max="90"
-                        aria-label="Choose a font zise" />
+                        aria-label="Choose a font size" />
                     <div class="font-btn">
                         <button id="btn-left" class="" type="button" aria-label="Text align left">
                             <i class="fas fa-align-left"></i>
@@ -251,14 +260,14 @@
                     </div>
                 </div>
                 <div>
-                    <input id="checkbox-transparent type=" checkbox"" />
+                    <input id="checkbox-transparent" type="checkbox" />
                     <label for="checkbox-transparent">
                         Transparent background
                     </label>
                 </div>
             </div>
 
-            <div class="border-container mb-20px">
+            <div class="border-container">
                 <h4>
                     OUTLINE
                 </h4>
