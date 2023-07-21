@@ -209,3 +209,30 @@ const alignTextRight = () => {
     bottomText.style.justifyContent = "flex-end";
 }
 
+    // FONT/BACKGGROUND COLOR
+
+const fontTextColor = document.getElementById("font-text-color");
+const fontColorHex = document.getElementById("font-color-hex");
+const textBackgroundColor = document.getElementById("text-background-color");
+const textBackgroundColorHex = document.getElementById("text-background-color-hex");
+
+
+fontTextColor.addEventListener("input", () => changeFontColor());
+textBackgroundColor.addEventListener("input", () => changeTextBackgroundColor());
+
+
+const changeFontColor = () => {
+    let colorPicked = fontTextColor.value;
+    let upperCaseColorPicked = colorPicked.toUpperCase();
+    fontColorHex.innerHTML = `${upperCaseColorPicked}`;
+    topText.style.color = colorPicked;
+    bottomText.style.color = colorPicked;
+};
+
+const changeTextBackgroundColor = () => {
+    let colorPicked = textBackgroundColor.value;
+    let upperCaseColorPicked = colorPicked.toUpperCase();
+    textBackgroundColorHex.innerHTML = `${upperCaseColorPicked}`;
+    topText.style.backgroundColor = colorPicked;
+    bottomText.style.backgroundColor  = colorPicked;
+};
