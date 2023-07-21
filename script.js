@@ -209,7 +209,7 @@ const alignTextRight = () => {
     bottomText.style.justifyContent = "flex-end";
 }
 
-    // FONT/BACKGGROUND COLOR
+    // FONT/BACKGROUND COLOR
 
 const fontTextColor = document.getElementById("font-text-color");
 const fontColorHex = document.getElementById("font-color-hex");
@@ -236,3 +236,39 @@ const changeTextBackgroundColor = () => {
     topText.style.backgroundColor = colorPicked;
     bottomText.style.backgroundColor  = colorPicked;
 };
+
+    // TRANSPARENT BACKGROUND
+
+const checkboxTransparent = document.getElementById("checkbox-transparent");
+
+checkboxTransparent.addEventListener("click", () => transparentBackground());
+
+const transparentBackground = () => {
+    topText.classList.toggle("hidden");
+    bottomText.classList.toggle("hidden");
+}
+
+    // OUTLINE
+
+const textOutlineNone = document.getElementById("text-outline-none");
+const textOutlineLight = document.getElementById("text-outline-light")
+const textOutlineDark = document.getElementById("text-outline-dark")
+
+textOutlineNone.addEventListener("click", () => outlineNone());
+textOutlineLight.addEventListener("click", () => outlineLight());
+textOutlineDark.addEventListener("click", () => outlineDark());
+
+const outlineNone = () => {
+	topText.style.textShadow = "none";
+	bottomText.style.textShadow = "none";
+}
+
+const outlineLight = () => {
+	topText.style.textShadow = "white";
+	bottomText.style.textShadow = "white";
+}
+
+const outlineDark = () => {
+	topText.style.textShadow = "black";
+	bottomText.style.textShadow = "black";
+}
