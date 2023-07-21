@@ -251,8 +251,8 @@ const transparentBackground = () => {
     // OUTLINE
 
 const textOutlineNone = document.getElementById("text-outline-none");
-const textOutlineLight = document.getElementById("text-outline-light")
-const textOutlineDark = document.getElementById("text-outline-dark")
+const textOutlineLight = document.getElementById("text-outline-light");
+const textOutlineDark = document.getElementById("text-outline-dark");
 
 textOutlineNone.addEventListener("click", () => outlineNone());
 textOutlineLight.addEventListener("click", () => outlineLight());
@@ -264,11 +264,21 @@ const outlineNone = () => {
 }
 
 const outlineLight = () => {
-	topText.style.textShadow = "white";
-	bottomText.style.textShadow = "white";
+	topText.style.textShadow = "rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px";
+	bottomText.style.textShadow = "rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px";
 }
 
 const outlineDark = () => {
-	topText.style.textShadow = "black";
-	bottomText.style.textShadow = "black";
+	topText.style.textShadow = "rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px";
+	bottomText.style.textShadow = "rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px";
+}
+
+    // SPACING
+
+const spacingInput = document.getElementById("spacing-text-input");
+spacingInput.addEventListener('input', () => spaceText());
+
+const spaceText = () => {
+	topText.style.padding = `${spacingInput.value}px`;
+	bottomText.style.padding = `${spacingInput.value}px`;
 }
