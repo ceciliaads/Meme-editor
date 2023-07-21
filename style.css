@@ -9,6 +9,12 @@ body {
     color: #FFFFFF;
 }
 
+.close-aside {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px 0 0;
+}
+
 .front-page {
     width: 80%;
 }

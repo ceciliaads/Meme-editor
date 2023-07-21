@@ -282,3 +282,24 @@ const spaceText = () => {
 	topText.style.padding = `${spacingInput.value}px`;
 	bottomText.style.padding = `${spacingInput.value}px`;
 }
+
+    // LEADING
+
+const leadingInput = document.getElementById("leading-text-input");
+leadingInput.addEventListener("input", () => leadingText());
+
+const leadingText = () => {
+    topText.style.lineHeight =`${leadingInput.value}`;
+    bottomText.style.lineHeight = `${leadingInput.value}`;
+}
+
+// // CLOSE ASIDE 
+
+// const closeAside =  document.getElementById("close-aside");
+// const aside = document.querySelector(".aside");
+
+// closeAside.addEventListener("click", () => closeAsideWindow());
+
+// const closeAsideWindow = () => {
+//     aside.classList.toggle("hidden")
+// }
