@@ -68,7 +68,7 @@
 
     </section>
     <aside class="aside">
-        <div id="close-aside" class="close-aside">
+        <div id="close-aside" class="close-aside hidden">
             <i class="fa-solid fa-xmark"></i>
         </div>
         <!-- ---------------------------------------------------------
@@ -78,19 +78,19 @@
                 IMAGE
             </h3>
             <form id="form-image" class="form-img">
-                <label for="url-img">
+                <label for="url-img" class="label-style bold">
                     URL
                 </label>
                 <input id="url-img" class="url-img" type="url" />
 
 
-                <label for="color-picker">
+                <label for="color-picker" class="label-style bold">
                     BACKGROUND
                 </label>
 
                 <div class="flex-row background-color-filters">
                     <div class="input-color-container input-style flex-row">
-                        <input id="color-picker" class="input-color input-style" type="color" value="#FFFFFF" />
+                        <input id="color-picker" class="input-color" type="color" value="#FFFFFF" />
                         <span id="color-name" class="text-color-hex">
                             #FFFFFF
                         </span>
@@ -106,59 +106,60 @@
                     </select>
                 </div>
 
+                <h4 class="label-style bold">
+                    FILTERS
+                </h4>
 
-                <h4>FILTERS</h4>
-
-                <label for="brightness-input">
-                    Brightness
+                <label for="brightness-input" class="label-style">
+                    BRIGHTNESS
                 </label>
                 <input id="brightness-input" class="input-range" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Brightness range" />
 
-                <label for="opacity-input">
-                    Opacity
+                <label for="opacity-input" class="label-style">
+                    OPACITY
                 </label>
                 <input id="opacity-input" class="input-range" type="range" min="0" max="1" step="0.1" value="1"
                     aria-label="Opacity range" />
 
-                <label for="contrast-input">
-                    Contrast
+                <label for="contrast-input" class="label-style">
+                    CONTRAST
                 </label>
                 <input id="contrast-input" class="input-range" type="range" min="100" max="1000" step="1" value="100"
                     aria-label="Contrast range" />
 
-                <label for="blur-input">
-                    Blur
+                <label for="blur-input" class="label-style">
+                    BLUR
                 </label>
                 <input id="blur-input" class="input-range" type="range" min="0" max="10" step="0.1" value="0"
                     aria-label="Blur range" />
 
-                <label for="grayscale-input">
-                    Grayscale
+                <label for="grayscale-input" class="label-style">
+                    GRAYSCALE
                 </label>
                 <input id="grayscale-input" class="input-range" type="range" min="0" max="100" step="1" value="0"
                     aria-label="Grayscale range" />
 
-                <label for="sepia-input">
-                    Sepia
+                <label for="sepia-input" class="label-style">
+                    SEPIA
                 </label>
                 <input id="sepia-input" class="input-range" type="range" min="0" max="100" step="1" value="0"
                     aria-label="Sepia range" />
 
-                <label for="hue-rotation-input">
-                    Hue-rotation
+                <label for="hue-rotation-input" class="label-style">
+                    HUE-ROTATION
                 </label>
                 <input id="hue-rotation-input" class="input-range" type="range" min="0" max="359" step="1" value="0"
                     aria-label="Hue-rotation range" />
 
-                <label for="saturation-input">
-                    Saturation
+                <label for="saturation-input" class="label-style">
+                    SATURATION
                 </label>
                 <input id="saturation-input" class="input-range" type="range" min="100" max="1000" step="10" value="100"
                     aria-label="Saturation range" />
 
-                <label for="invert-input">
-                    Invert
+                <label for="invert-input" class="label-style">
+                    INVERT
                 </label>
                 <input id="invert-input" class="input-range" type="range" min="0" max="1" step="0.1" value="0"
                     aria-label="Invert range" />
