@@ -73,7 +73,7 @@
         </div>
         <!-- ---------------------------------------------------------
             --------------------------- IMAGE --------------------------- -->
-        <section id="img-aside" class="img-aside">
+        <section id="img-aside" class="img-aside aside-containers">
             <h3>
                 IMAGE
             </h3>
@@ -81,7 +81,7 @@
                 <label for="url-img" class="label-style bold">
                     URL
                 </label>
-                <input id="url-img" class="url-img" type="url" />
+                <input id="url-img" class="url-img input-style" type="url" />
 
 
                 <label for="color-picker" class="label-style bold">
@@ -89,14 +89,14 @@
                 </label>
 
                 <div class="flex-row background-color-filters">
-                    <div class="input-color-container input-style flex-row">
+                    <div class="input-color-container input-style flex-row mr5">
                         <input id="color-picker" class="input-color" type="color" value="#FFFFFF" />
                         <span id="color-name" class="text-color-hex">
                             #FFFFFF
                         </span>
                     </div>
 
-                    <select id="background-filter" class="input-style" title="Choose a color filter">
+                    <select id="background-filter" class="input-style filter-option-img" title="Choose a color filter">
                         <option value="unset">None</option>
                         <option value="lighten">Lighten</option>
                         <option value="darken">Darken</option>
@@ -164,7 +164,7 @@
                 <input id="invert-input" class="input-range" type="range" min="0" max="1" step="0.1" value="0"
                     aria-label="Invert range" />
 
-                <button id="reset-btn" class="reset-btn" type="button" aria-label="Reset filters">
+                <button id="reset-btn" class="reset-btn input-style" type="button" aria-label="Reset filters">
                     Reset filters
                 </button>
             </form>
@@ -173,42 +173,42 @@
 
         <!-- ---------------------------------------------------------
             --------------------------- TEXT --------------------------- -->
-        <section id="text-aside" class="text-aside hidden">
+        <section id="text-aside" class="text-aside aside-containers hidden">
             <h3>TEXTO</h3>
 
-            <div class="upper-text-container">
-                <label for="top-text-input">
+            <div class="upper-text-container flex-column">
+                <label class="label-style bold" for="top-text-input">
                     UPPER
                 </label>
-                <textarea id="top-text-input" class="" type="text" placeholder="TOP TEXT"
+                <textarea id="top-text-input" class="input-style" type="text" placeholder="TOP TEXT"
                     aria-label="Introduce upper text for meme"></textarea>
                 <div>
                     <input id="check-top-text" type="checkbox" aria-label="Remove upper text" />
-                    <label for="check-top-text" class="">
+                    <label class="label-style" for="check-top-text">
                         Remove upper text
                     </label>
                 </div>
             </div>
 
-            <div class="lower-text-container">
-                <label for="bottom-text-input">
+            <div class="lower-text-container flex-column">
+                <label class="label-style bold" for="bottom-text-input">
                     LOWER
                 </label>
-                <textarea id="bottom-text-input" class="" type="text" placeholder="BOTTOM TEXT"
+                <textarea id="bottom-text-input" class="input-style" type="text" placeholder="BOTTOM TEXT"
                     aria-label="Introduce lower text for meme"></textarea>
                 <div>
                     <input id="check-bottom-text" type="checkbox" aria-label="Remove lower text" />
-                    <label for="check-bottom-text" class="">
+                    <label class="label-style" for="check-bottom-text" class="">
                         Remove lower text
                     </label>
                 </div>
             </div>
 
-            <div class="font-container">
-                <label for="font-selector" aria-label="Choose a text font">
+            <div class="font-container flex-column">
+                <label class="label-style bold" for="font-selector" aria-label="Choose a text font">
                     FONT
                 </label>
-                <select id="font-selector" class="">
+                <select id="font-selector" class="input-style">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewriter">American Typewriter</option>
@@ -219,18 +219,17 @@
                     <option value="Verdana">Verdana</option>
                     <option value="Times New Roman">Times New Roman</option>
                 </select>
-
-                <div class="option-text-align">
-                    <input id="font-size" class="" type="number" value="50" min="12" max="90"
-                        aria-label="Choose a font size" />
+                <div class="option-text-align flex-row">
+                    <input id="font-size" class="input-style font-size-input mr5" type="number" value="50" min="12"
+                        max="90" aria-label="Choose a font size" />
                     <div class="font-btn">
-                        <button id="btn-left" class="" type="button" aria-label="Text align left">
+                        <button id="btn-left" class="input-style" type="button" aria-label="Text align left">
                             <i class="fas fa-align-left"></i>
                         </button>
-                        <button id="btn-center" class="" type="button" aria-label=" Text alignt center">
+                        <button id="btn-center" class="input-style" type="button" aria-label=" Text alignt center">
                             <i class="fas fa-align-center"></i>
                         </button>
-                        <button id="btn-right" class="" type="button" aria-label="Text align right">
+                        <button id="btn-right" class="input-style" type="button" aria-label="Text align right">
                             <i class="fas fa-align-right"></i>
                         </button>
                     </div>
@@ -238,24 +237,25 @@
             </div>
 
             <div class="color-font-container">
-                <div>
+                <div class="color-bg-container">
                     <div class="color-container">
-                        <label for="font-text-color">
+                        <label class="label-style bold" for="font-text-color">
                             COLOR
                         </label>
-                        <div class="cont-input-color">
-                            <input id="font-text-color" class="" type="color" value="#000000" aria-label="Text color" />
+                        <div class="cont-input-color input-style flex-row">
+                            <input id="font-text-color" class="input-color" type="color" value="#000000"
+                                aria-label="Text color" />
                             <span id="font-color-hex" class="text-color-hex">
                                 #000000
                             </span>
                         </div>
                     </div>
                     <div class="background-color-container">
-                        <label for="text-background-color">
+                        <label class="label-style bold" for="text-background-color">
                             BACKGROUND
                         </label>
-                        <div class="text-background-color-input">
-                            <input id="text-background-color" class="" type="color" value="#FFFFFF"
+                        <div class="text-background-color-input input-style flex-row">
+                            <input id="text-background-color" class="input-color" type="color" value="#FFFFFF"
                                 aria-label="Text background color" />
                             <span id="text-background-color-hex" class="text-color-hex">
                                 #FFFFFF
@@ -265,41 +265,44 @@
                 </div>
                 <div>
                     <input id="checkbox-transparent" type="checkbox" />
-                    <label for="checkbox-transparent">
+                    <label class="label-style" for="checkbox-transparent">
                         Transparent background
                     </label>
                 </div>
             </div>
 
             <div class="border-container">
-                <h4>
+                <h4 class="label-style bold">
                     OUTLINE
                 </h4>
-                <div class="border-options">
-                    <button id="text-outline-none" type="button" aria-label="No text outline">
+                <div class="border-options flex-row">
+                    <button id="text-outline-none" class="input-style outline-btn mr5 " type="button"
+                        aria-label="No text outline">
                         None
                     </button>
-                    <button id="text-outline-light" type="button" aria-label="Light text outline">
+                    <button id="text-outline-light" class="input-style outline-btn mr5 " type="button"
+                        aria-label="Light text outline">
                         Light
                     </button>
-                    <button id="text-outline-dark" type="button" aria-label="Dark text outline">
+                    <button id="text-outline-dark" class="input-style outline-btn" type="button"
+                        aria-label="Dark text outline">
                         Dark
                     </button>
                 </div>
             </div>
 
-            <div class="space-text-container">
-                <label for="spacing-text-input">
-                    Spacing
+            <div class="space-text-container flex-column">
+                <label class="label-style bold" for="spacing-text-input">
+                    SPACING
                 </label>
-                <input id="spacing-text-input" class="" type="number" min="10" max="50" />
+                <input id="spacing-text-input" class="input-style" type="number" value="38" min="10" max="50" />
             </div>
 
-            <div class="leading-text-container">
-                <label for="leading-text-input">
-                    Leading
+            <div class="leading-text-container flex-column">
+                <label class="label-style bold" for="leading-text-input">
+                    LEADING
                 </label>
-                <select id="leading-text-input" class="">
+                <select id="leading-text-input" class="input-style">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
                     <option value="1.2" selected>1.2</option>

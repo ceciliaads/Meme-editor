@@ -26,6 +26,7 @@ const hideTextAside = () => {
 const changeMode = () => {
     textAside.classList.toggle("light-aside");
     imgAside.classList.toggle("light-aside");
+    imgNav.classList.toggle("hover-light");
     mainContainer.classList.toggle("main-container-light");
     header.classList.toggle("header-light");
     downloadBtnContainer.classList.toggle("dl-btn-container-light")

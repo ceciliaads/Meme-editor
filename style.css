@@ -8,33 +8,10 @@
 body {
     display: flex;
     color: #FFFFFF;
+    overflow: hidden;
 }
 
-/* LIGHT MODE*/
 
-.main-container-light {
-    background-color: #EEEEEE;
-}
-
-.header-light {
-    background-color: #E0E0E0;
-    color: #424242;
-}
-
-.light-aside { 
-    background-color: #FAFAFA;
-    color: #4C4C4C;
-    height: 100vh;
-}
-
-.header-light {
-    background-color: #E0E0E0;
-    color: #424242;
-}
-
-.dl-btn-container-light {
-    background-color: #EEEEEE;
-}
 
 
 
@@ -154,14 +131,13 @@ li {
     font-weight: bold;
 }
 
-.img-aside {
+.aside-containers {
     display: flex;
     flex-direction: column;
     padding: 15px;
 
 }
-
-.img-aside h3 {
+h3 {
     padding: 20px 0;
     text-align: center;
 }
@@ -172,6 +148,10 @@ li {
 
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
 
 .flex-row {
@@ -181,21 +161,34 @@ li {
     align-items: center;
 
 }
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
-.url-img {
+/* .url-img {
     background-color: #393E49;
     border: 0;
     border-radius: 2px;
     padding: 10px;
     outline: none;
-}
+} */
 
 .input-color {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     background-color: transparent;
     border: none;
 
+}
+
+.input-color-container {
+    width: 50%;
+
+}
+
+.filter-option-img {
+    width: 50%;
 }
 
 .input-color::-webkit-color-swatch,
@@ -206,11 +199,10 @@ li {
 }
 
 
-
-
 .url-img:hover, .input-style:hover, .reset-btn:hover, li:hover{
     background-color: #4E5565;;
 }
+
 
 .input-style {
     background-color: #393E49;
@@ -219,11 +211,33 @@ li {
     color: #FFFFFF;
     font-size: 13px;
     padding: 10px;
+    margin: 5px 0 5px 0;
 
 }
 
+.color-container {
+    width: 50%;
+    margin-right:10px ;
+}
+
+.background-color-container {
+    width: 50%;
+}
+
+.font-size-input {
+    width: 50%;
+    /* margin-right:; */
+}
+
+.font-btn {
+    width: 50%;
+}
+
+
 .text-color-hex {
     font-size: 13px;
+    padding-right: 20px;
+
 }
 
 .reset-btn {
@@ -277,3 +291,46 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]:active::-webkit-slider-runnable-track {
     background: #9E9E9E;
 }
+
+.color-bg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.outline-btn {
+    width: 33%;
+
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+/* LIGHT MODE*/
+
+.main-container-light {
+    background-color: #EEEEEE;
+}
+
+.header-light {
+    background-color: #E0E0E0;
+    color: #424242;
+}
+
+.light-aside { 
+    background-color: #FAFAFA;
+    color: #4C4C4C;
+    height: 100vh;
+}
+
+.header-light {
+    background-color: #E0E0E0;
+    color: #424242;
+}
+
+.dl-btn-container-light {
+    background-color: #EEEEEE;
+}
+
