@@ -8,7 +8,7 @@
 -   CSS3
 -   JavaScript
 
-[Here is my project](https://julianabaezz.github.io/Generador-de-memes/) para ver nuestro proyecto deployado.
+[Here is my project](https://julianabaezz.github.io/Generador-de-memes/)
 
 ## Made by:
 
