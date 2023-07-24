@@ -273,7 +273,8 @@ input[type=range]:active::-webkit-slider-runnable-track {
     height: 100vh;
 }
 
-.input-style-light {
+.light-mode{
     background-color: #E0E0E0;
+    color: #4C4C4C;
 }
 

@@ -5,9 +5,13 @@ const modeNav = document.getElementById("nav-mode");
 
 const imgAside = document.getElementById("img-aside");
 const textAside = document.getElementById("text-aside");
-const mainContainer = document.getElementById("main-container")
+const mainContainer = document.getElementById("main-container");
 const header = document.getElementById("header");
-const downloadBtnContainer = document.getElementById("dl-btn-container")
+const downloadBtnContainer = document.getElementById("dl-btn-container");
+
+const inputColorContainer = document.querySelector(".input-color-container");
+const contInputColor = document.querySelector(".cont-input-color");
+const textBackgroundColorInput = document.querySelector(".text-background-color-input");
 
 imgNav.addEventListener("click", () => hideImgAside());
 textNav.addEventListener("click", () => hideTextAside());
@@ -30,6 +34,24 @@ const changeMode = () => {
     mainContainer.classList.toggle("main-container-light");
     header.classList.toggle("header-light");
     downloadBtnContainer.classList.toggle("dl-btn-container-light")
+    urlImg.classList.toggle("light-mode");
+    inputColorContainer.classList.toggle("light-mode");
+    backgroundFilter.classList.toggle("light-mode");
+    resetBtn.classList.toggle("light-mode");
+    topTextInput.classList.toggle("light-mode");
+    bottomTextInput.classList.toggle("light-mode");
+    fontSelector.classList.toggle("light-mode");
+    fontSize.classList.toggle("light-mode");
+    alignLeftBtn.classList.toggle("light-mode");
+    alignCenterBtn.classList.toggle("light-mode");
+    alignRightBtn.classList.toggle("light-mode");
+    contInputColor.classList.toggle("light-mode");
+    textBackgroundColorInput.classList.toggle("light-mode");
+    textOutlineNone.classList.toggle("light-mode");
+    textOutlineLight.classList.toggle("light-mode");
+    textOutlineDark.classList.toggle("light-mode");
+    spacingInput.classList.toggle("light-mode");
+    leadingInput.classList.toggle("light-mode");
 
     if (mainContainer.classList.contains("main-container-light")) {
         modeNav.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Dark mode';
@@ -174,7 +196,7 @@ const changeFontFamily = () => {
     
 fontSelector.addEventListener("change", () => changeFontFamily());
 
-const fontSize =  document.getElementById ("font-size");
+const fontSize =  document.getElementById("font-size");
 fontSize.addEventListener("change", () => changeFontSize());
 
 
