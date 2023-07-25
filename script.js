@@ -52,6 +52,7 @@ const changeMode = () => {
     textOutlineDark.classList.toggle("light-mode");
     spacingInput.classList.toggle("light-mode");
     leadingInput.classList.toggle("light-mode");
+    document.body.classList.toggle("light-mode-range");
 
     if (mainContainer.classList.contains("main-container-light")) {
         modeNav.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Dark mode';
@@ -316,13 +317,19 @@ const leadingText = () => {
     bottomText.style.lineHeight = `${leadingInput.value}`;
 }
 
-// // CLOSE ASIDE 
+// CLOSE ASIDE 
 
-// const closeAside =  document.getElementById("close-aside");
-// const aside = document.querySelector(".aside");
+const closeAside =  document.getElementById("close-aside");
+const aside = document.querySelector(".aside");
+const frontPage = document.querySelector(".front-page");
+closeAside.addEventListener("click", () => closeAsideWindow());
 
-// closeAside.addEventListener("click", () => closeAsideWindow());
+const closeAsideWindow = () => {
+    aside.classList.add("hidden");
 
-// const closeAsideWindow = () => {
-//     aside.classList.toggle("hidden")
-// }
+    if (aside.classList.contains("hidden")) {
+        frontPage.style.display = "flex"; 
+        
+    }
+}
+
