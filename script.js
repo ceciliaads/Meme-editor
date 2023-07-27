@@ -20,9 +20,11 @@ modeNav.addEventListener("click", () => changeMode());
 const hideImgAside = () => {
     textAside.classList.add("hidden");
     imgAside.classList.remove("hidden");
+    // aside.classList.add("hidden")
 }
 
 const hideTextAside = () => {
+    // aside.classList.add("hidden")
     imgAside.classList.add("hidden");
     textAside.classList.remove("hidden");
 }
@@ -325,11 +327,13 @@ const frontPage = document.querySelector(".front-page");
 closeAside.addEventListener("click", () => closeAsideWindow());
 
 const closeAsideWindow = () => {
-    aside.classList.add("hidden");
+    textAside.classList.add("hidden");
+    imgAside.classList.add("hidden");
+    // aside.classList.add("hidden");
 
-    if (aside.classList.contains("hidden")) {
-        frontPage.style.display = "flex"; 
+    // if (aside.classList.contains("hidden")) {
+    //     frontPage.style.display = "flex"; 
         
-    }
+    // }
 }
 

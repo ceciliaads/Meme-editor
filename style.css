@@ -367,8 +367,8 @@ input[type=range]:active::-webkit-slider-runnable-track {
     .dl-btn-container {
         height: 10vh;
     }
-
-    .aside {
+    
+    /* .aside {
         display: none;
-    }
+    }  */
 }
