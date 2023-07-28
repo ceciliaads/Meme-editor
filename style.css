@@ -7,7 +7,8 @@
 body {
     display: flex;
     color: #FFFFFF;
-    overflow: hidden;
+    overflow: auto;
+    position: relative;
 }
 
 h3 {
@@ -20,7 +21,7 @@ p {
 }
 
 .front-page {
-    width: 80%;
+    width: 100%;
     height: 100vh;
 }
 
@@ -53,8 +54,10 @@ p {
 
 .main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #30343F;
+    height: 88vh;
 }
 
 .meme-container {
@@ -85,14 +88,6 @@ p {
     background-position: "center";
 }
 
-.dl-btn-container{
-    background-color: #30343F;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .download-btn {
     background-color: #377D33;
     color: white;
@@ -110,6 +105,10 @@ p {
     height: 100vh;
     width: 20%;
     background-color: #252935; 
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
 }
 
 /* -------------------------------------
@@ -119,11 +118,6 @@ p {
     display: flex;
     justify-content: flex-end;
     padding: 20px 20px 0 0;
-}
-.aside-containers {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
 }
 
 .reset-btn {
@@ -267,10 +261,6 @@ input[type=range]:active::-webkit-slider-runnable-track {
     background-color: #EEEEEE;
 }
 
-.dl-btn-container-light {
-    background-color: #EEEEEE;
-}
-
 .light-aside { 
     background-color: #FAFAFA;
     color: #4C4C4C;
@@ -286,10 +276,16 @@ input[type=range]:active::-webkit-slider-runnable-track {
     background-color: #FAFAFA;
 }
 
+.light-mode-varios .url-img:hover, .input-style:hover, .reset-btn:hover, li:hover{
+    background-color: #BDBDBD;
+}
+
+
+
 /* -------------------------------------
 -------------------- RESPONSIVE -------------------- */
 
-@media screen and (max-width:640px ) {
+@media (max-width:700px ) {
     body {
         overflow: scroll;
     }
@@ -315,60 +311,75 @@ input[type=range]:active::-webkit-slider-runnable-track {
         padding: 5px;
     }
 
-    .meme-container {
-        padding: 20px;
-        height: 65vh;
-        width: 80vw;
-    }
-
-    .dl-btn-container {
-        height: 10vh;
+    .main-container {
+        height: 100%;
     }
 
     .close-aside {
         display: flex;
     }
-    
+
     .aside {
         width: 100%;
-        height: 100%;
-    }
-
-    .front-page {
-        display: none;
-        flex-direction: column;
         height: 100vh;
-        width: 100vw;
+        position: absolute;
     }
 
     .label-style {
         margin: 10px 0 ;
     }
-    
 
+    .light-aside { 
+        box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3)
+    }
 }
 
-@media screen and (max-width:1280px ) {
-    
-    .front-page {
-        height: 100vh;
-        width: 100vw;
-    }
+@media (min-width: 700px) and (max-width:1200px ) {
     .header {
         height: 15vh;
     }
     
     .meme-container {
-        padding: 30px;
-        height: 70vh;
+        height: 85vh;
         width: 60vw;
     }
 
-    .dl-btn-container {
-        height: 10vh;
+    .aside {
+        width: 35%;
+        height: 100%;
+        position: absolute;
+        left: 60%;
     }
-    
-    /* .aside {
-        display: none;
-    }  */
+
+    .light-aside { 
+        box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3)
+    }
+}
+
+@media (min-width:1200px ) and (max-width: 1440px){
+    .meme-container {
+        height: 85vh;
+        width: 50vw;
+    }
+
+    .aside {
+        width: 20%;
+        position: absolute;
+        left: 78%;
+    }
+
+    .light-aside { 
+        box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3)
+    }
+}
+
+@media ( min-width: 1440px ){
+    .meme-container {
+        height: 85vh;
+        width: 50vw;
+    }
+
+    .aside {
+        padding: 24px;
+    }
 }

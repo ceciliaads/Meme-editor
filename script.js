@@ -8,6 +8,8 @@ const textAside = document.getElementById("text-aside");
 const mainContainer = document.getElementById("main-container");
 const header = document.getElementById("header");
 const downloadBtnContainer = document.getElementById("dl-btn-container");
+const aside = document.getElementById("aside");
+
 
 const inputColorContainer = document.querySelector(".input-color-container");
 const contInputColor = document.querySelector(".cont-input-color");
@@ -20,18 +22,17 @@ modeNav.addEventListener("click", () => changeMode());
 const hideImgAside = () => {
     textAside.classList.add("hidden");
     imgAside.classList.remove("hidden");
-    // aside.classList.add("hidden")
+    aside.classList.remove("hidden")
 }
 
 const hideTextAside = () => {
-    // aside.classList.add("hidden")
+    aside.classList.remove("hidden")
     imgAside.classList.add("hidden");
     textAside.classList.remove("hidden");
 }
 
 const changeMode = () => {
-    textAside.classList.toggle("light-aside");
-    imgAside.classList.toggle("light-aside");
+    aside.classList.toggle("light-aside");
     imgNav.classList.toggle("hover-light");
     mainContainer.classList.toggle("main-container-light");
     header.classList.toggle("header-light");
@@ -55,6 +56,7 @@ const changeMode = () => {
     spacingInput.classList.toggle("light-mode");
     leadingInput.classList.toggle("light-mode");
     document.body.classList.toggle("light-mode-range");
+    document.body.classList.toggle("light-mode-varios");
 
     if (mainContainer.classList.contains("main-container-light")) {
         modeNav.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Dark mode';
@@ -322,18 +324,11 @@ const leadingText = () => {
 // CLOSE ASIDE 
 
 const closeAside =  document.getElementById("close-aside");
-const aside = document.querySelector(".aside");
 const frontPage = document.querySelector(".front-page");
 closeAside.addEventListener("click", () => closeAsideWindow());
 
 const closeAsideWindow = () => {
-    textAside.classList.add("hidden");
-    imgAside.classList.add("hidden");
-    // aside.classList.add("hidden");
+    aside.classList.toggle("hidden");
 
-    // if (aside.classList.contains("hidden")) {
-    //     frontPage.style.display = "flex"; 
-        
-    // }
 }
 
